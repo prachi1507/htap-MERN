@@ -13,6 +13,8 @@ import axios from "axios";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DoctorSearchModal from "./modals/DoctorSearchModal";
+import heroimg from  '../assets/consultdoctor.jpg';
+
 
 function HeroSection() {
   const [showModal, setShowModal] = useState(false);
@@ -156,7 +158,7 @@ function HeroSection() {
           </div>
           <div className="mt-8 md:mt-0 md:w-1/2">
             <img
-              src="./src/assets/consultdoctor.jpg"
+              src={heroimg}
               alt="Hero"
               className="mx-auto md:mx-0 rounded-b-md"
             />
