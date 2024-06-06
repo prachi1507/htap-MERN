@@ -1,5 +1,6 @@
 import React from "react";
 import DoctorCard from "./DoctorCard";
+import aboutimg from "../assets/aboutimg.png"
 
 function AboutUs() {
   return (
@@ -22,7 +23,7 @@ function AboutUs() {
         <div className="w-full md:w-1/2  relative overflow-hidden">
           <div className="absolute bg-voilet z-0 md:w-[80%] w-[95%] rounded-l-full h-full right-0"></div>
           <img
-            src="/src/assets/aboutimg.png"
+            src={aboutimg}
             alt="Medical Consultant"
             className=" z-10 relative object-center object-cover md:left-[300px] left-32 bottom-0"
           />
