@@ -4,6 +4,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "../App.css";
+import vector from "../assets/vectorbg.png";
 
 const Login = () => {
   const [responseData, setResponseData] = useState(null);
@@ -149,7 +150,7 @@ const Login = () => {
 
           <div className="login-bg flex justify-center items-center relative">
             <img
-              src="./src/assets/vectorbg.png"
+              src={vector}
               className="object-contain z-0 rounded-r-xl rounded-l-lg"
               style={{
                 maxWidth: "100%",
@@ -157,6 +158,8 @@ const Login = () => {
                 height: "auto",
                 width: "auto",
               }}
+
+              
             />
             {responseData && responseData.length > 0 && (
               <div className="absolute bottom-2 text-center text-white font-inter">
@@ -190,6 +193,7 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
+
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
