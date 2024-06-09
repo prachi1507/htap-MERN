@@ -4,7 +4,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "../App.css";
-import vector from "../assets/vectorbg.png" 
+import vector from "../assets/vectorbg.png";
 
 const Login = () => {
   const [responseData, setResponseData] = useState(null);
@@ -193,6 +193,7 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
+
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
