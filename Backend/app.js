@@ -53,7 +53,17 @@ app.get("/api/cities", (req, res) => {
   });
 });
 
+app.get("/hello-world", (req, res) => {
+  // Read the JSON file
+   res.send("hello-world");
+
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+
+
