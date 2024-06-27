@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 require("dotenv").config();
+ const cities = require("./city.js"); ; 
+
 
 const connectToDatabase = require("./database/Connection");
 const userRoutes = require("./routes/userRoutes");
@@ -41,16 +43,13 @@ app.use("/api", chatRoutes);
 // Define the route to return JSON data
 app.get("/api/cities", (req, res) => {
   // Read the JSON file
-  fs.readFile("./city.json", "utf8", (err, data) => {
-    if (err) {
-      console.error("Error reading JSON file:", err);
-      return res.status(500).json({ error: "Internal server error" });
-    }
-    // Parse the JSON data
-    const cities = JSON.parse(data);
-    // Return the JSON data
-    res.json(cities);
-  });
+ try{
+   res.json(cities)
+ }  
+ catch(error){
+  res.status(500).send("server error");
+ }
+ 
 });
 
 app.get("/hello-world", (req, res) => {

@@ -1,3 +1,4 @@
+const cities =
 [
   {
     "id": "1",
@@ -6105,3 +6106,4 @@
     "state": "Assam"
   }
 ]
+module.exports = cities;
