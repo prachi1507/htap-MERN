@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import { faL } from "@fortawesome/free-solid-svg-icons";
+import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,7 +50,7 @@ function Navbar() {
       <nav className="bg-white shadow p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <div className="text-xl mr-4 font-inter">HTap</div>
+            <div className="text-2xl mr-4 font-inter text-blue-500 font-bold">H<span className="text-black">T</span>ap</div>
           </div>
           <div className="flex items-center">
             <div className="hidden md:flex gap-10">
@@ -92,11 +93,16 @@ function Navbar() {
               )}
               {session && (
                 <div className="mr-2">
+                
+                
+                  {profile?.profilePic?
+                
                   <img
                     src={`${endpoint}/users/profile/${profile?.profilePic}`}
                     alt="Avatar"
-                    className="rounded-full w-8 h-8"
-                  />
+                    className="rounded-full w-8 h-8" 
+                  /> : 
+                  <FaUserCircle size={"30"} />}  
                 </div>
               )}
 
